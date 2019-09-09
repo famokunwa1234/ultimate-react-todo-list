@@ -7,11 +7,37 @@ import TodoInput from "./Component/TodoInput";
 import TodoList from "./Component/TodoList";
 
 class App extends Component {
+  state={
+    item:[{id:1,title: "wake up"}, {id:2,title: "wake breakfast"}],
+  id:uuid(),
+  item: "",
+  editItem:false 
+  };
+  handleChange= (e)=>{console.log("handle change")}
+  handleSubmit= (e)=>{console.log("handle Submit")}
+  clearList= ()=>{console.log("clear List")}
+  handleDelete= (id)=>{console.log("handle edit ${id}")}
+  handlEdit= (id)=>{console.log("edit edit ${id}")}
   render() {
+    //console.log(this.state);
     return (
-      <div>
-     <TodoInput />
-     <TodoList />
+      <div className="container">
+        <div className="row">
+          <div className="col-10 mx-auto col-md-8 mt-5">
+         <h3 className="text-capitalize text-center">todo input</h3>
+         <TodoInput />
+         <TodoList />
+        </div>
+         </div>
+         </div>
+    );
+    }
+    }
+
+    export default App;
+
+
+    
 
 
 
@@ -29,14 +55,11 @@ class App extends Component {
        </div>
      </div>
     </div> */}
-      </div>
-    );
-  }
-}
+      
+  
 
 
 
-export default App;
 
 
 
